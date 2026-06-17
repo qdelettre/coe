@@ -1,0 +1,17 @@
+{
+  "name": "coe",
+  "owner": {
+    "name": "Quentin Delettre"
+  },
+  "metadata": {
+    "description": "Correction-of-Errors retrospective for self-improving Claude after medium-to-big sessions"
+  },
+  "plugins": [
+    {
+      "name": "coe",
+      "source": "./plugins/coe",
+      "description": "Run an end-of-session Correction-of-Errors retrospective that proposes rule/memory/skill/hook improvements",
+      "author": { "name": "Quentin Delettre" }
+    }
+  ]
+}

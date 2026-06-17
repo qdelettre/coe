@@ -1,0 +1,41 @@
+{
+  "skill_name": "coe",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Run /coe for a session where unit tests passed only because they mocked the validation function they were meant to test, so broken validation shipped. Transcript: evals/files/failure-session.jsonl",
+      "expected_output": "A COE document in docs/coe/ with a 5-whys reaching a systemic root cause (mocks don't verify real behavior), and action items tagged with both a config target and a code target.",
+      "files": ["evals/files/failure-session.jsonl"],
+      "assertions": [
+        "Creates a date-prefixed file under docs/coe/",
+        "Contains a Root Cause section with at least 4 why iterations",
+        "Root cause is systemic, not 'be more careful'",
+        "At least one action item is tagged [TEST]",
+        "At least one action item is tagged [CLAUDE.md] or [RULE] or [HOOK]",
+        "Contains Summary, What Worked, Frictions/Incidents, Root Cause, Action Items, Lessons Learned sections"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Run /coe for a session that succeeded with no failures, but the agent ran a manual deploy check three times and opened a PR without using the existing /pr:create skill. Transcript: evals/files/friction-session.jsonl",
+      "expected_output": "A COE document that produces at least one action item from a zero-failure session, proposing a skill or rule to automate the repeated manual step or enforce skill usage.",
+      "files": ["evals/files/friction-session.jsonl"],
+      "assertions": [
+        "Produces at least one action item despite no failure occurring",
+        "At least one action item is tagged [SKILL] or [RULE]",
+        "An action item names a concrete mechanism (a rule/skill), not an intention",
+        "The repeated manual step or missed skill appears in Frictions/Incidents"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Run /coe for a near-empty session. Transcript: evals/files/sparse-session.jsonl",
+      "expected_output": "Because the transcript is sparse, the skill should fall back to interviewing the user rather than fabricating findings.",
+      "files": ["evals/files/sparse-session.jsonl"],
+      "assertions": [
+        "Does not fabricate frictions from an empty transcript",
+        "Asks the user interview questions (what went wrong / how discovered / how resolved) before writing a document"
+      ]
+    }
+  ]
+}

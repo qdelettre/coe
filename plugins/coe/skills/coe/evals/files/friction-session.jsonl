@@ -1,0 +1,6 @@
+{"type":"user","message":{"content":[{"type":"text","text":"open a PR for this branch"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Bash","input":{"command":"gh pr create --title x"}}]}}
+{"type":"user","message":{"content":[{"type":"text","text":"run the deploy check"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Bash","input":{"command":"./deploy-check.sh"}}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Bash","input":{"command":"./deploy-check.sh"}}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Bash","input":{"command":"./deploy-check.sh"}}]}}

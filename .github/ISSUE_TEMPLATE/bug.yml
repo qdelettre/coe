@@ -1,0 +1,60 @@
+name: Bug report
+description: Something's broken or behaving unexpectedly
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file this. The clearer the reproducer,
+        the faster a fix lands.
+
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you expect, and what actually happened?
+      placeholder: |
+        Expected: ...
+        Actual: ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: repro
+    attributes:
+      label: Minimal reproducer
+      description: Exact prompts, commands, or steps that trigger the bug. If a session transcript is involved, note what it contained.
+      render: bash
+    validations:
+      required: true
+
+  - type: input
+    id: coe-version
+    attributes:
+      label: coe version (or commit)
+      placeholder: "v0.1.0 (or sha)"
+    validations:
+      required: true
+
+  - type: input
+    id: cc-version
+    attributes:
+      label: Claude Code version
+      placeholder: "1.x.x"
+    validations:
+      required: true
+
+  - type: input
+    id: host-os
+    attributes:
+      label: Host OS
+      placeholder: "macOS 15.4"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant logs
+      description: Hook output, error text, or anything from the COE doc / findings files
+      render: text

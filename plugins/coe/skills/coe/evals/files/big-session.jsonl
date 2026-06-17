@@ -1,0 +1,16 @@
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Read"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Edit"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Edit"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Edit"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Edit"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Edit"}]}}
+{"type":"assistant","message":{"content":[{"type":"tool_use","name":"Edit"}]}}

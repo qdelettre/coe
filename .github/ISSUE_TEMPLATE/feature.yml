@@ -1,0 +1,37 @@
+name: Feature request
+description: Suggest something coe should do
+labels: [enhancement]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Feature requests are considered case-by-case. `coe` is solo-maintained
+        — most features land via PR rather than a backlog.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to do that's currently hard or impossible?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed shape
+      description: How should coe behave? A skill-step sketch, a new action-item tag, a hook tweak, whatever fits.
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+      description: What workarounds exist today? What did you rule out?
+
+  - type: checkboxes
+    id: contribution
+    attributes:
+      label: Are you willing to contribute?
+      options:
+        - label: I'd open a PR if pointed at the right files
+        - label: I'd help test once a draft exists
