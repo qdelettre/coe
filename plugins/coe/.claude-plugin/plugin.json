@@ -1,7 +1,7 @@
 {
   "name": "coe",
   "description": "Run an end-of-session Correction-of-Errors retrospective that proposes rule/memory/skill/hook improvements",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": {
     "name": "Quentin Delettre"
   }
