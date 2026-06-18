@@ -37,3 +37,24 @@ The nudge test suite is the fast feedback loop:
 ```bash
 bash plugins/coe/scripts/test-coe-nudge.sh
 ```
+
+## Secret scanning
+
+This repo runs [gitleaks](https://github.com/gitleaks/gitleaks) to keep secrets
+out of the codebase, on two layers:
+
+- **CI (blocking):** the `Security` workflow scans every push to `main` and every
+  PR. A finding fails the check — secrets must be removed and rotated, never
+  ignored.
+- **Local pre-commit hook (optional, recommended):** scans your staged diff
+  before each commit, so a secret never reaches a commit in the first place.
+
+Enable the local hook once per clone:
+
+```bash
+brew install prek gitleaks   # or any prek install method (cargo, uv, npm, …)
+prek install                 # writes .git/hooks/pre-commit
+```
+
+[prek](https://github.com/j178/prek) is a single-binary, Python-free runner for
+the standard `.pre-commit-config.yaml`. Classic `pre-commit` also works.
